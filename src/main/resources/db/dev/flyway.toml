@@ -1,0 +1,23 @@
+databaseType = "Sqlite"
+name = "dev"
+id = "d2855f81-82dd-4731-a1a2-8230e1b61d41"
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+schemaModel = "./schema-model"
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[flyway]
+mixed = true
+outOfOrder = true
+locations = [ "filesystem:migrations" ]
+validateMigrationNaming = true
+
+  [flyway.check]
+  majorTolerance = 0
+
+[environments.targetd]
+url = "jdbc:sqlite:C:/challenge/assessment-cc-java-sr-01/assessment-test.sqlite"

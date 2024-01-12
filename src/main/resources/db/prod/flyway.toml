@@ -1,0 +1,18 @@
+databaseType = "Sqlite"
+name = "prod"
+id = "02b25044-fc94-4a6c-a396-fc050ae835c9"
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+schemaModel = "./schema-model"
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[flyway]
+mixed = true
+outOfOrder = true
+locations = ["filesystem:migrations"]
+validateMigrationNaming = true
+check = {majorTolerance = 0}
